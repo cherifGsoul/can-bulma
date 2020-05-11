@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="../../node_modules/bulma/css/bulma.css">
+
+
+<a-demo></a-demo>
+
+<script src="../../node_modules/steal/steal.js" main="@empty">
+	import '~/breadcrumbs/breadcrumbs';
+	import { StacheElement } from 'can';
+
+	class Demo extends StacheElement {
+		static view = `
+			<can-bulma-breadcrumbs items:bind="this.items"></can-bulma-breadcrumbs>
+			<can-bulma-breadcrumbs items:bind="this.items" alignment:raw="centered"></can-bulma-breadcrumbs>
+			<can-bulma-breadcrumbs items:bind="this.items" alignment:raw="right"></can-bulma-breadcrumbs>
+			<can-bulma-breadcrumbs items:bind="this.items" separator:raw="arrow"></can-bulma-breadcrumbs>
+			<can-bulma-breadcrumbs items:bind="this.items" separator:raw="bullet"></can-bulma-breadcrumbs>
+			<can-bulma-breadcrumbs items:bind="this.items" separator:raw="succeeds"></can-bulma-breadcrumbs>
+			<can-bulma-breadcrumbs items:bind="this.items" size:raw="small"></can-bulma-breadcrumbs>
+			<can-bulma-breadcrumbs items:bind="this.items" size:raw="medium"></can-bulma-breadcrumbs>
+			<can-bulma-breadcrumbs items:bind="this.items" size:raw="large"></can-bulma-breadcrumbs>
+		`;
+
+		static props = {
+			get items() {
+				return [{
+					label: 'Bulma',
+					href: '#'
+				},{
+					label: 'CanJS',
+					href: '#',
+					active: true
+				}];
+			}
+		};
+	}
+
+	customElements.define('a-demo', Demo);
+
+</script>

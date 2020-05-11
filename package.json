@@ -1,0 +1,38 @@
+{
+  "name": "can-bulma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "can": "^6.2.8",
+    "classnames": "^2.2.6",
+    "steal": "^2.2.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "mocha": "^6.2.2",
+    "steal-mocha": "^2.0.1"
+  },
+  "steal": {
+    "main": "can-bulma",
+    "directories": {
+      "lib": "src"
+    },
+    "babelOptions": {
+      "plugins": [
+        "transform-class-properties"
+      ]
+    },
+    "plugins": [
+      "can"
+    ]
+  }
+}

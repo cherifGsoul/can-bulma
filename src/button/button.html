@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="../../node_modules/bulma/css/bulma.css">
+
+
+<a-demo></a-demo>
+
+<script src="../../node_modules/steal/steal.js" main="@empty">
+	import '~/button/button';
+	import { StacheElement } from 'can'
+	
+	class Demo extends StacheElement {
+		static view = `
+			<can-bulma-button label:raw="Click me"></can-bulma-button>
+			<can-bulma-button label:raw="White button" color:raw="white"></can-bulma-button>
+			<can-bulma-button label:raw="Light button" color:raw="light"></can-bulma-button>
+			<can-bulma-button label:raw="Dark button" color:raw="dark"></can-bulma-button>
+			<can-bulma-button label:raw="Black button" color:raw="black"></can-bulma-button>
+			<can-bulma-button label:raw="Text button" color:raw="text"></can-bulma-button>
+			<can-bulma-button label:raw="Primary button" color:raw="primary"></can-bulma-button>
+			<can-bulma-button label:raw="Link button" color:raw="link"></can-bulma-button>
+			<can-bulma-button label:raw="Info button" color:raw="info"></can-bulma-button>
+			<can-bulma-button label:raw="Success button" color:raw="success"></can-bulma-button>
+			<can-bulma-button label:raw="Warning button" color:raw="warning"></can-bulma-button>
+			<can-bulma-button label:raw="Danger button" color:raw="danger"></can-bulma-button>
+			<can-bulma-button label:raw="Primary light button" color:raw="primary" light:raw="true"></can-bulma-button>
+			<can-bulma-button label:raw="Link light button" color:raw="link" light:raw="true"></can-bulma-button>
+			<can-bulma-button label:raw="Info light button" color:raw="info" light:raw="true"></can-bulma-button>
+			<can-bulma-button label:raw="Success light button" color:raw="success" light:raw="true"></can-bulma-button>
+			<can-bulma-button label:raw="Warning light button" color:raw="warning" light:raw="true"></can-bulma-button>
+			<can-bulma-button label:raw="Danger light button" color:raw="danger" light:raw="true"></can-bulma-button>
+		`;
+
+		static props = {
+			lable: {
+				type: String,
+				default: 'The label'
+			}
+		}
+	}
+	customElements.define('a-demo', Demo);
+</script>
